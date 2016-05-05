@@ -1,0 +1,21 @@
+.open-link {
+  padding:10px;
+  background:#aaa;
+  margin:0;
+  cursor:pointer;
+  transition:0.5s linear all;
+}
+.open-link:hover {
+  background:black;
+  color:white;
+} 
+.open-link.active {
+  background:maroon;
+  color:white;
+}
+.content-box {
+  overflow:hidden;
+}
+.inner {
+  padding:1em;
+}

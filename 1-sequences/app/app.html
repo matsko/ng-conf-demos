@@ -1,0 +1,13 @@
+<nav>
+  <ol>
+    <li *ngFor="let page of pages, let i = index">
+      <button (click)="tab(i)">{{ page.title }}</button>
+    </li>
+  </ol>
+<nav>
+
+<hr />
+
+<div *ngFor="let page of pages, let i = index" @tab="isActive(i) ? 'active' : 'closed'">
+  {{ page.content }}
+</div>

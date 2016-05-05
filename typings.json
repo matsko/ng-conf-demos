@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "es6-promise": "registry:npm/es6-promise#3.0.0+20160211003958"
+  },
+  "ambientDependencies": {
+    "es6-collections": "registry:dt/es6-collections#0.5.1+20160316155526"
+  }
+}

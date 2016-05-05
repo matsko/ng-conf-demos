@@ -1,0 +1,10 @@
+<button (click)="toggleOpenAll()">Open All</button>
+<panel *ngFor="let page of pages" [title]="page.title" [open]="openAll">
+  {{ page.content }}
+  <div *ngIf="page.links.length > 0">
+    <hr />
+    <a [href]="link" *ngFor="let link of page.links">
+      {{ link }}
+    </a>
+  </div>
+</panel>

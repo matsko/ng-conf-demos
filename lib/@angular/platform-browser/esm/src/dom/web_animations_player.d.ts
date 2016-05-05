@@ -1,0 +1,17 @@
+import { AnimationPlayer } from '../../core_private';
+import { DomAnimatePlayer } from './dom_animate_player';
+export declare class WebAnimationsPlayer implements AnimationPlayer {
+    private _player;
+    private _subscriptions;
+    private _finished;
+    parentPlayer: AnimationPlayer;
+    constructor(_player: DomAnimatePlayer);
+    private _onFinish();
+    onDone(fn: Function): void;
+    play(): void;
+    pause(): void;
+    finish(): void;
+    reset(): void;
+    restart(): void;
+    destroy(): void;
+}

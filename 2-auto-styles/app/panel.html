@@ -1,0 +1,6 @@
+<h2 class="open-link" (click)="toggleOpen()" [class.active]="open">{{ title }}</h2>
+<div class="content-box" @active="open ? 'open' : 'closed'">
+  <div class="inner">
+    <ng-content></ng-content>
+  </div>
+</div>
