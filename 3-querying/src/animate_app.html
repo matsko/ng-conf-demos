@@ -1,14 +1,24 @@
-<button (click)="openModal()">Open Modal</button>
+<button (click)="openModal()">Contact Us</button>
 <div (click)="closeModal()" [class.visible]="isModalOpen()" class="modal-overlay"></div>
 
 <div class="modal-container" *ngIf="isModalOpen()">
-  <header class="section">Content</header>
+  <header class="section">Contact Us</header>
   <div class="content section">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum dolor eros, vitae feugiat lectus consequat vel. Cras dignissim mauris non mi lobortis congue. Suspendisse et egestas velit. Aliquam erat volutpat. Sed eu dolor ut tortor blandit lacinia. Vestibulum mauris neque, faucibus sodales sollicitudin et, suscipit at leo. Vivamus massa nisi, euismod ut congue non, consequat ac tortor. Praesent vitae eros mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc sagittis, ante ac sodales scelerisque, urna velit posuere justo, sit amet semper dui nisi quis ipsum. Suspendisse lacinia fermentum diam a scelerisque. Aliquam venenatis orci sapien, ac placerat est fringilla ac. Curabitur sit amet urna pretium, aliquam massa efficitur, venenatis enim. Integer diam justo, rhoncus quis pellentesque vel, condimentum vitae massa. Etiam at eros et lacus tristique luctus et ac risus.
-    </p>
+    <label for="email-address">
+      <input type="email" id="email-address" placeholder="Email Address">
+    </label>
+  </div>
+  <div class="content section">
+    <label for="subject">
+      <input type="text" id="subject" placeholder="Subject">
+    </label>
+  </div>
+  <div class="content section">
+    <label for="body">
+      <textarea id="body" placeholder="Your Message"></textarea>
+    </label>
   </div>
   <nav class="actions section">
-    <button (click)="closeModal()">Close Modal</button>
+    <button (click)="closeModal()">SEND</button>
   </nav>
 </div>

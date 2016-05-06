@@ -5,6 +5,8 @@ import {Component, group, query, snapshot, animate, style, restore, save} from '
   styles: [`
     :host {
       font-family: 'Helvetica Neue', sans-serif;
+      display: block;
+      text-align: center;
     }
     .modal-overlay {
       display:none;
@@ -27,15 +29,43 @@ import {Component, group, query, snapshot, animate, style, restore, save} from '
       z-index:500;
       padding: 50px;
       box-sizing: border-box;
+      text-align: left;
     }
-    .modal-overlay.visible { display:block;  cursor:pointer; } 
+    .modal-overlay.visible {
+      display:block;
+      cursor:pointer;
+    } 
     header {
       background: #283593;
       color: white;
       padding: 15px;
     }
     .actions {
-      text-align: center;
+      text-align: right;
+    }
+    button {
+      padding: 20px;
+      background: #283593;
+      color: white;
+      border: none;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    label {
+      display: block;
+      padding: 15px 0;
+    }
+    input, textarea {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #283593;
+      box-shadow: none;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    textarea {
+      height: 100px;
     }
   `],
   animations: {
