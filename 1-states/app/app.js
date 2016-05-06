@@ -13,8 +13,31 @@ var core_1 = require('@angular/core');
 var App = (function () {
     function App() {
         this.emails = [
-            { subject: 'Angular 2 Release Date', sender: 'Brad Green' },
-            { subject: 'Invite: Angular 3 Planning Meeting', sender: 'Papa Misko' },
+            {
+                subject: 'Angular 2 Release Date',
+                sender: 'Brad Green',
+                body: "\nHey team,\n\nI'm thinking we can ship Angular 2 in anywhere between 2 days and 2 years.\n\nWhat do you think?\n\nCheers,\nBrad Green\nThe boss of the Father of AngularJS      \n      "
+            },
+            {
+                subject: 'Invite: Angular 3 Planning Meeting',
+                sender: 'Papa Misko',
+                body: "\nHey team,\n\nI'm really excited for Angular 2, but I think it's time to start thinking about Angular 3.\n\nI'm thinking we kill off Components and switch from TypeScript to CoffeeScript.\n\nLet me know what you think.\n\nMisko Hevery a.k.a. Papa Misko      \n      "
+            },
+            {
+                subject: 'Delete all the tests?',
+                sender: 'David East',
+                body: "\nHey ngFolks,\n\nTesting is really hard, so I'm just going to delete all the .spec.ts files.\n\nSound good? Great!      \n\nDavid East\nFirebase all the things\n      "
+            },
+            {
+                subject: 'Router vs Router',
+                sender: 'Pete Bacon Darwin',
+                body: "\nHey everyone,\n\nJust a friendly reminder that the term is router, not router.\n\nHope that clears everything up.\n\nCheers,\nPete Bacon-Router Darwin\n      "
+            },
+            {
+                subject: 'Invitation: Your Deep Brain Stimulation Appointment',
+                sender: 'Dr Andres Lozano',
+                body: "\nHey Matias,\n\nWe have you scheduled for this upcoming Friday at 9am.\n\nRemember to bring your tin-foil.\n\nCheers,\nDr. Andres Lozano\n      "
+            },
         ];
         this.selectedEmail = this.emails[0];
     }
