@@ -5,11 +5,12 @@ import {Component, snapshot, animate, style, restore, save} from 'angular2/core'
   styles: [`
     button {
       padding:20px;
-      background:maroon;
-      font-size:20px;
+      background:#283593;
+      font-size:14px;
       color:white;
       border:0;
       cursor:pointer;
+      text-transform: uppercase;
     }
 
     div {
@@ -26,9 +27,6 @@ import {Component, snapshot, animate, style, restore, save} from 'angular2/core'
       border-radius: 50%;
       transform-origin: 50% 50%;
     }
-
-    .red { background-color:maroon; }
-    .green { background-color:silver; }
   `],
   animations: {
     'ng-enter': [
@@ -58,9 +56,7 @@ import {Component, snapshot, animate, style, restore, save} from 'angular2/core'
   template: `
     <button (click)="visible=!visible">Animate</button>
     <hr />
-    <div *ngFor="#item of items, #i = index"
-        [class]="makeClass(i)"
-        [style.background-image]="'url(img/' + item.img + ')'">
+    <div *ngFor="#item of items, #i = index" [style.background-image]="'url(img/' + item.img + ')'">
     </div>
   `
 })
@@ -70,10 +66,6 @@ export class AnimateApp {
 
   get visible() {
     return this._visible;
-  }
-
-  makeClass(index) {
-    return index % 2 == 0 ? 'red' : 'green';
   }
 
   set visible(bool) {
