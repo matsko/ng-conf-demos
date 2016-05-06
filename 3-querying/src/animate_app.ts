@@ -33,7 +33,7 @@ import {Component, group, query, snapshot, animate, style, restore, save} from '
       group([
         animate({ opacity: 1, top:'200px' }, '800ms 0ms cubic-bezier(0.68,-0.55,0.265,1.55)'),
         query('.section', [
-          style({ opacity: 0, transform:'translateY(-100px) scale(1.1)' })
+          style({ opacity: 0, transform:'translateY(-100px) scale(1.1)' }),
           animate({ opacity: 1, transform:'translateY(0px) scale(1)' }, '700ms 200ms ease-out').stagger('100ms')
         ])
       ])
@@ -42,7 +42,7 @@ import {Component, group, query, snapshot, animate, style, restore, save} from '
       style({ opacity:1, transform:'scale(1)' }),
       group([
         query('.section', [
-          style({ opacity: 1, transform:'translateY(0px)' })
+          style({ opacity: 1, transform:'translateY(0px)' }),
           animate({ opacity: 0, transform:'translateY(-100px) scale(1.2)' }, '400ms ease-out').stagger('50ms')
         ]),
         animate({ opacity:0, transform: 'scale(1.5)' }, '600ms ease-out')

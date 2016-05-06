@@ -39,7 +39,6 @@ import {Component, snapshot, animate, style, restore, save} from 'angular2/core'
       animate('.normal', '0.5s').stagger('40ms'),
 
       restore('0.5s').stagger('10ms')
-      //animate([':initial', {'transform':'rotate(10deg) translateY(-20px)'}], '0.5s').stagger('100ms')
     ],
     'ng-leave': [
       style('.green'),

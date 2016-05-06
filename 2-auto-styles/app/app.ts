@@ -9,7 +9,7 @@ import {PanelCmp} from './panel';
   directives: [PanelCmp]
 })
 export class App {
-  @ViewChildren(PanelCmp) panels: PanelCmp[];
+  @ViewChildren(PanelCmp) panels;
   openAll = false;
   toggleOpenAll() {
     this.openAll = !this.openAll;

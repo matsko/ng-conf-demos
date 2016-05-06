@@ -37,7 +37,7 @@ var App = (function () {
     };
     __decorate([
         core_1.ViewChildren(panel_1.PanelCmp), 
-        __metadata('design:type', Array)
+        __metadata('design:type', Object)
     ], App.prototype, "panels", void 0);
     App = __decorate([
         core_1.Component({

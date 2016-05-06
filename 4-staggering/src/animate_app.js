@@ -47,7 +47,7 @@ var AnimateApp = (function () {
                     core_1.style('.invisible'),
                     core_1.style('.white'),
                     core_1.style({ height: '0px' }),
-                    core_1.animate(['.visible', { height: '200px' }], '0.5s ease-out').stagger('40ms'),
+                    core_1.animate(['.visible', { height: '200px' }], '0.5s ease-out').stagger('middleOut', '40ms'),
                     core_1.animate('.normal', '0.5s').stagger('40ms'),
                     core_1.restore('0.5s').stagger('10ms')
                 ],
