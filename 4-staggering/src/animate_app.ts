@@ -30,12 +30,9 @@ import {Component, snapshot, animate, style, restore, save} from 'angular2/core'
   `],
   animations: {
     'ng-enter': [
-      save(['height','transform','background-color','opacity']),
-        
+      save(['transform','opacity']),
       style('.invisible'),
-        
       animate(['.normal', '.visible'], '0.15s ease-in').stagger('100ms'),
-
       restore('0.35s')
     ],
     'ng-leave': [
