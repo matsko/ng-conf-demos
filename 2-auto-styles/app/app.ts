@@ -1,5 +1,5 @@
 //our root app component
-import {Component} from '@angular/core';
+import {Component, ViewChildren} from '@angular/core';
 import {Page} from './page';
 import {PanelCmp} from './panel';
 
@@ -9,15 +9,24 @@ import {PanelCmp} from './panel';
   directives: [PanelCmp]
 })
 export class App {
+  @ViewChildren(PanelCmp) panels: PanelCmp[];
   openAll = false;
   toggleOpenAll() {
     this.openAll = !this.openAll;
+  }
+  checkPanels() {
+    const panels = this.panels.toArray();
+    const baseline = panels[0].open;
+    for (let i = 1; i < panels.length; i++) {
+      if (baseline !== panels[i].open) return;
+    }
+    this.openAll = baseline;
   }
   pages = [
     new Page("Darth Vader", `
 Darth Vader, also known as Anakin Skywalker, is a fictional character in the Star Wars universe.[1][2][3] Vader appears in the original trilogy as a pivotal figure whose actions drive the plot of the first three films while his past as Anakin Skywalker, and the story of his corruption, is central to the prequel trilogy.
 
-The character was created by George Lucas and has been portrayed by numerous actors. His appearances span the first six Star Wars films, and his character is heavily referenced in Star Wars: The Force Awakens. He is also an important character in the Star Wars expanded universe of television series, video games, novels, literature and comic books. Originally a Jedi prophesied to bring balance to the Force, he falls to the dark side of the Force and serves the evil Galactic Empire at the right hand of his Sith master, Emperor Palpatine (also known as Darth Sidious).[4] He is also the father of Luke Skywalker and Princess Leia Organa, grandfather of Kylo Ren, and secret husband of Padm�� Amidala.
+The character was created by George Lucas and has been portrayed by numerous actors. His appearances span the first six Star Wars films, and his character is heavily referenced in Star Wars: The Force Awakens. He is also an important character in the Star Wars expanded universe of television series, video games, novels, literature and comic books. Originally a Jedi prophesied to bring balance to the Force, he falls to the dark side of the Force and serves the evil Galactic Empire at the right hand of his Sith master, Emperor Palpatine (also known as Darth Sidious).[4] He is also the father of Luke Skywalker and Princess Leia Organa, grandfather of Kylo Ren, and secret husband of Padmé Amidala.
 
 The American Film Institute listed him as the third greatest movie villain in cinema history on 100 Years... 100 Heroes and Villains, behind Hannibal Lecter and Norman Bates.`
     ),
@@ -26,7 +35,7 @@ Luke Skywalker is a fictional character appearing as the central protagonist of 
 
 In 2008, the character was selected by Empire magazine as the 54th greatest movie character of all time.[2] On their list of the 100 Greatest Fictional Characters, Fandomania.com ranked Luke at number 14.`
     ),
-    new Page("contact page", `
+    new Page("Han Solo", `
 Han Solo is a fictional character in the Star Wars franchise, portrayed in films by Harrison Ford. In the original film trilogy, Han and his co-pilot, Chewbacca, become involved in the Rebel Alliance which opposes the Galactic Empire. During the course of the Star Wars story, he becomes a chief figure in the Alliance and succeeding galactic governments. Star Wars creator George Lucas described the character as "a loner who realizes the importance of being part of a group and helping for the common good".
     `, [
       'https://en.wikipedia.org/wiki/Han_Solo'

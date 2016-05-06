@@ -14,9 +14,11 @@ var PanelCmp = (function () {
     function PanelCmp() {
         this.title = "";
         this.open = false;
+        this.onToggle = new core_1.EventEmitter;
     }
     PanelCmp.prototype.toggleOpen = function () {
         this.open = !this.open;
+        this.onToggle.next();
     };
     __decorate([
         core_1.Input('title'), 
@@ -26,6 +28,10 @@ var PanelCmp = (function () {
         core_1.Input(), 
         __metadata('design:type', Object)
     ], PanelCmp.prototype, "open", void 0);
+    __decorate([
+        core_1.Output('onToggle'), 
+        __metadata('design:type', Object)
+    ], PanelCmp.prototype, "onToggle", void 0);
     PanelCmp = __decorate([
         core_1.Component({
             selector: 'panel',

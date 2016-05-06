@@ -22,7 +22,6 @@ import {animation, style, animate, state, transition, Component} from '@angular/
 export class App {
   selectedEmail;
   emails = [
-    { subject: 'Tuscan Whole Milk', sender: 'Amazon' }
     { subject: 'Angular 2 Release Date', sender: 'Brad Green' },
     { subject: 'Invite: Angular 3 Planning Meeting', sender: 'Papa Misko' },
   ];

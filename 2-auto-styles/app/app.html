@@ -1,5 +1,5 @@
-<button (click)="toggleOpenAll()">Open All</button>
-<panel *ngFor="let page of pages" [title]="page.title" [open]="openAll">
+<button (click)="toggleOpenAll()">{{ openAll ? 'Close All' : 'Open All' }}</button>
+<panel *ngFor="let page of pages" [title]="page.title" [open]="openAll" (onToggle)="checkPanels()">
   {{ page.content }}
   <div *ngIf="page.links.length > 0">
     <hr />

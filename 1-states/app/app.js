@@ -13,7 +13,6 @@ var core_1 = require('@angular/core');
 var App = (function () {
     function App() {
         this.emails = [
-            { subject: 'Tuscan Whole Milk', sender: 'Amazon' },
             { subject: 'Angular 2 Release Date', sender: 'Brad Green' },
             { subject: 'Invite: Angular 3 Planning Meeting', sender: 'Papa Misko' },
         ];

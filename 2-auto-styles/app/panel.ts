@@ -1,6 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {animation, style, animate, state, transition} from '@angular/core'
-import {Page} from './page';
 
 @Component({
   selector: 'panel',
@@ -20,8 +19,10 @@ import {Page} from './page';
 export class PanelCmp {
   @Input('title') title = "";
   @Input() open = false;
+  @Output('onToggle') onToggle = new EventEmitter;
 
   toggleOpen() {
     this.open = !this.open;
+    this.onToggle.next();
   }
 } 

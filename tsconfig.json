@@ -14,7 +14,7 @@
         }
     },
     "files": [
-      "./1-sequences/app/main.ts",
+      "./1-states/app/main.ts",
       "./2-auto-styles/app/main.ts",
       "./3-inbox/app/main.ts",
       "./typings/es6-collections.d.ts",

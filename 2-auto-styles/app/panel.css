@@ -1,17 +1,20 @@
+:host {
+  font-family: 'Helvetica Neue', sans-serif;
+}
 .open-link {
-  padding:10px;
-  background:#aaa;
-  margin:0;
-  cursor:pointer;
-  transition:0.5s linear all;
+  padding: 10px;
+  background: #6d7291;
+  margin: 0;
+  cursor: pointer;
+  transition: 0.35s ease-out;
+  color: white;
+}
+.open-link.active {
+  background: #414c91;
 }
 .open-link:hover {
-  background:black;
-  color:white;
-} 
-.open-link.active {
-  background:maroon;
-  color:white;
+  background: #496093;
+  color: black;
 }
 .content-box {
   overflow:hidden;

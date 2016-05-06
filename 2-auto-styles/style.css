@@ -1,0 +1,13 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+button {
+  padding: 10px;
+  background: #496093;
+  color: white;
+  border: none;
+  margin: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
