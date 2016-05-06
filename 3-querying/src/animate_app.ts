@@ -3,6 +3,9 @@ import {Component, group, query, snapshot, animate, style, restore, save} from '
 @Component({
   selector: 'animate-app',
   styles: [`
+    :host {
+      font-family: 'Helvetica Neue', sans-serif;
+    }
     .modal-overlay {
       display:none;
       position:fixed;
@@ -15,37 +18,48 @@ import {Component, group, query, snapshot, animate, style, restore, save} from '
     }
     .modal-container {
       position:fixed;
-      top:0;
+      top:50px;
       left:50%;
       width:600px;
       margin-left:-300px;
       border:10px solid black;
       background:white;
       z-index:500;
+      padding: 50px;
+      box-sizing: border-box;
     }
     .modal-overlay.visible { display:block;  cursor:pointer; } 
+    header {
+      background: #283593;
+      color: white;
+      padding: 15px;
+    }
+    .actions {
+      text-align: center;
+    }
   `],
   animations: {
     'ng-enter': [
-      style({ opacity: 0, 'top':'-200px' }),
-      query('.section', [style({ opacity: 0 })]),
+      style({ opacity: 0, transform: 'scale(0)' }),
+      query('.section', [style({ opacity: 0, transform: 'scale(0.8)' })]),
 
       group([
-        animate({ opacity: 1, top:'200px' }, '800ms 0ms cubic-bezier(0.68,-0.55,0.265,1.55)'),
+        animate({ opacity: 1, transform: 'scale(1)' }, '800ms 0ms cubic-bezier(0.68,-0.55,0.265,1.55)'),
         query('.section', [
-          style({ opacity: 0, transform:'translateY(-100px) scale(1.1)' }),
-          animate({ opacity: 1, transform:'translateY(0px) scale(1)' }, '700ms 200ms ease-out').stagger('100ms')
+          style({ opacity: 0, transform:'scale(0.8)' }),
+          animate({ opacity: 1, transform:'scale(1.2)' }, '300ms 100ms ease-out').stagger('100ms'),
+          animate({ transform:'scale(1)' }, '300ms ease-out')
         ])
       ])
     ],
     'ng-leave': [
-      style({ opacity:1, transform:'scale(1)' }),
+      style({ opacity: 1, transform: 'scale(1)' }),
       group([
         query('.section', [
-          style({ opacity: 1, transform:'translateY(0px)' }),
-          animate({ opacity: 0, transform:'translateY(-100px) scale(1.2)' }, '400ms ease-out').stagger('50ms')
+          style({ opacity: 1, transform:'scale(1)' }),
+          animate({ opacity: 0, transform:'scale(0.8)' }, '400ms ease-out').stagger('50ms')
         ]),
-        animate({ opacity:0, transform: 'scale(1.5)' }, '600ms ease-out')
+        animate({ opacity:0, transform: 'scale(0.8)' }, '600ms ease-out')
       ])
     ]
   },
