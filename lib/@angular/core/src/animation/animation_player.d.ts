@@ -6,6 +6,8 @@ export declare abstract class AnimationPlayer {
     abstract finish(): void;
     abstract destroy(): void;
     abstract reset(): void;
+    abstract setPosition(p: any): void;
+    abstract getPosition(): number;
     parentPlayer: AnimationPlayer;
 }
 export declare class NoOpAnimationPlayer implements AnimationPlayer {
@@ -19,4 +21,6 @@ export declare class NoOpAnimationPlayer implements AnimationPlayer {
     finish(): void;
     destroy(): void;
     reset(): void;
+    setPosition(p: any): void;
+    getPosition(): number;
 }

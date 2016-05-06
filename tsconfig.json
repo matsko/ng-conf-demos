@@ -16,6 +16,7 @@
     "files": [
       "./1-states/app/main.ts",
       "./2-auto-styles/app/main.ts",
+      "./5-scrubbing/app/main.ts",
       "./typings/es6-collections.d.ts",
       "./typings/es6-promise.d.ts"
     ],

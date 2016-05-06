@@ -1,0 +1,10 @@
+<nav>
+  <button (click)="gotoTop()">Top</button>
+  <button (click)="gotoBottom()">Bottom</button>
+  <button (click)="togglePause()">
+    {{ paused ? 'Resume' : 'Pause' }} 
+  </button>
+  <input type="range" (input)="scrub($event.target.value)" min="0" max="100" [disabled]="!animationsRunning" />
+</nav>
+
+<div class="box" @boxAnimation="boxState"></div>

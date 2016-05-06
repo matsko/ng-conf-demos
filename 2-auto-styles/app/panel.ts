@@ -23,6 +23,6 @@ export class PanelCmp {
 
   toggleOpen() {
     this.open = !this.open;
-    this.onToggle.next();
+    this.onToggle.next(null);
   }
 } 

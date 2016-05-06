@@ -52,7 +52,7 @@ export declare function group(steps: AnimationMetadata[]): AnimationGroupMetadat
 export declare function sequence(steps: AnimationMetadata[]): AnimationSequenceMetadata;
 export declare function style(tokens: string | {
     [key: string]: string | number;
-} | Array<{
+} | Array<string | {
     [key: string]: string | number;
 }>): AnimationStyleMetadata;
 export declare function state(stateName: string, styles: AnimationStyleMetadata): AnimationStateDeclarationMetadata;

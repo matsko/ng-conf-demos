@@ -13,4 +13,6 @@ export declare class MockAnimationPlayer implements AnimationPlayer {
     finish(): void;
     reset(): void;
     destroy(): void;
+    setPosition(p: any): void;
+    getPosition(): number;
 }

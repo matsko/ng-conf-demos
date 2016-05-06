@@ -12,4 +12,6 @@ export declare class AnimationGroupPlayer implements AnimationPlayer {
     finish(): void;
     destroy(): void;
     reset(): void;
+    setPosition(p: any): void;
+    getPosition(): number;
 }

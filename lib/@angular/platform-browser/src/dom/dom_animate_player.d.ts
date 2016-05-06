@@ -5,4 +5,5 @@ export interface DomAnimatePlayer {
     finish(): void;
     onfinish: Function;
     position: number;
+    currentTime: number;
 }

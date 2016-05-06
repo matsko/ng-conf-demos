@@ -18,7 +18,7 @@ var PanelCmp = (function () {
     }
     PanelCmp.prototype.toggleOpen = function () {
         this.open = !this.open;
-        this.onToggle.next();
+        this.onToggle.next(null);
     };
     __decorate([
         core_1.Input('title'), 

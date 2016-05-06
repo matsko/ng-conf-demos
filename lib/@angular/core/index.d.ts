@@ -24,3 +24,4 @@ export { EventEmitter } from "./src/facade/async";
 export { ExceptionHandler, WrappedException, BaseException } from "./src/facade/exceptions";
 export * from './private_export';
 export * from './src/animation/metadata';
+export { AnimationPlayer } from './src/animation/animation_player';
