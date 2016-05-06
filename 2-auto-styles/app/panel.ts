@@ -11,8 +11,8 @@ import {animation, style, animate, state, transition} from '@angular/core'
       state('closed', style({ height: 0 })),
       state('open', style({ height: '*' })),
       transition('void => closed', [ animate(0) ]),
-      transition('closed => open', [ animate('500ms ease-out') ]),
-      transition('open => closed', [ animate('500ms ease-out') ])
+      transition('closed => open', [ animate('350ms ease-out') ]),
+      transition('open => closed', [ animate('350ms ease-out') ])
     ])
   ]
 })
