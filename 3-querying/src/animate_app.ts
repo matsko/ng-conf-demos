@@ -38,7 +38,8 @@ import {Component, group, query, snapshot, animate, style, restore, save} from '
     header {
       background: #283593;
       color: white;
-      padding: 15px;
+      padding: 20px;
+      text-align: center;
     }
     .actions {
       text-align: right;
