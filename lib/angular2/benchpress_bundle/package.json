@@ -1,0 +1,37 @@
+{
+  "name": "benchpress",
+  "version": "2.0.0-beta.8",
+  "description": "Benchpress - a framework for e2e performance tests",
+  "homepage": "https://github.com/angular/angular",
+  "bugs": "https://github.com/angular/angular/issues",
+  "main": "./index.js",
+  "contributors": [
+    "Alex Eagle <alexeagle@google.com>",
+    "Chirayu Krishnappa <chirayu@google.com>",
+    "Jeff Cross <crossj@google.com>",
+    "Matias Niemela <matsko@google.com>",
+    "Misko Hevery <misko@google.com>",
+    "Rado Kirov <radokirov@google.com>",
+    "Tobias Bosch <tbosch@google.com>",
+    "Victor Savkin <vsavkin@google.com>",
+    "Yegor Jbanov <yjbanov@google.com>",
+    "Jeremy Elbourn <jelbourn@google.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular/angular.git"
+  },
+  "dependencies": {
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "selenium-webdriver": "",
+    "zone.js": "0.5.15"
+  },
+  "optionalDependencies": {
+    "jpm": "1.0.0",
+    "firefox-profile": "^0.3.4"
+  }
+}

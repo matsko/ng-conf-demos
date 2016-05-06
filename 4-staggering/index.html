@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Angular 2 QuickStart</title>
+
+    <!-- 1. Load libraries -->
+    <script src="../lib/system.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.0/angular2-polyfills.js"></script>
+    <script src="../node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="../lib/angular2/angular2.dev.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+      System.config({
+        transpiler: 'typescript', 
+        typescriptOptions: { emitDecoratorMetadata: true }, 
+        packages: {'src': {defaultExtension: 'ts'}} 
+      });
+    </script>
+
+    <!-- 3. Bootstrap -->
+    <script>
+      System.import('angular2/platform/browser').then(function(ng){
+        System.import('angular2/core').then(function(core){
+          System.import('angular2/src/core/change_detection/interfaces').then(function(c){
+            System.import('src/animate_app').then(function(src) {
+              ng.bootstrap(src.AnimateApp, [
+                  core.provide(c.ChangeDetectorGenConfig,
+                    { useValue: new c.ChangeDetectorGenConfig(true, false, false) })
+              ]);
+            });
+          });
+        });
+      });
+    </script>
+
+  </head>
+
+  <!-- 4. Display the application -->
+  <body>
+    <animate-app>Loading...</animate-app>
+  </body>
+
+</html>

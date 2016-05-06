@@ -9,7 +9,8 @@
         "noImplicitAny": false,
         "sourceMap": false,
         "paths": {
-          "@angular/*": ["./lib/@angular/*"]
+          "@angular/*": ["./lib/@angular/*"],
+          "angular2/core": ["./lib/angular2/angular2.dev.js"]
         }
     },
     "files": [
