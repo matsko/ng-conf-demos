@@ -1,0 +1,76 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+my-app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+.left {
+  width: 25%;
+  border-right: 1px solid #666;
+  height: 100%;
+  overflow: auto;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.right {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+}
+.email-list-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 15px;
+  transition: 0.35s ease-out;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+.email-list-item * {
+  z-index: 1;
+  position: relative;
+}
+.email-list-item.active {
+  color: white;
+}
+.email-list-item .background {
+  background: #283593;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.email-list-item h1 {
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+.email-list-item h2 {
+  font-weight: normal;
+  font-size: 14px;
+  margin: 0;
+}
+.email-full {
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.email-full h1 {
+  margin: 0;
+}
+.email-full h2 {
+  font-size: 14px;
+  margin: 0;
+}

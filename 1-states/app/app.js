@@ -12,19 +12,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var App = (function () {
     function App() {
-        this._activePageIndex = 0;
-        this.pages = [
-            new Page("home page", "welcome to the home page"),
-            new Page("about page", "welcome to the home page"),
-            new Page("contact page", "welcome to the contact page")
+        this.emails = [
+            { subject: 'Tuscan Whole Milk', sender: 'Amazon' },
+            { subject: 'Angular 2 Release Date', sender: 'Brad Green' },
+            { subject: 'Invite: Angular 3 Planning Meeting', sender: 'Papa Misko' },
         ];
+        this.selectedEmail = this.emails[0];
     }
-    App.prototype.isActive = function (index) {
-        return this._activePageIndex == index;
-    };
-    App.prototype.tab = function (index) {
-        this._activePageIndex = index;
-    };
     App = __decorate([
         core_1.Component({
             selector: 'my-app',
@@ -32,14 +26,16 @@ var App = (function () {
             templateUrl: 'app/app.html',
             directives: [],
             animations: [
-                core_1.animation('tab', [
-                    core_1.state('active', core_1.style({ opacity: 1 })),
-                    core_1.state('closed', core_1.style({ opacity: 0 })),
-                    core_1.transition('void => active', [core_1.animate(1)]),
-                    core_1.transition('void => closed', [core_1.animate(1)]),
-                    core_1.transition('active => closed', [core_1.animate(500)]),
-                    core_1.transition('closed => active', [core_1.animate(500)])
-                ])
+                core_1.animation('state', [
+                    core_1.state('void', core_1.style({ display: 'none' })),
+                    core_1.state('active', core_1.style({ transform: 'translate3d(0, 0, 0)' })),
+                    core_1.state('hidden', core_1.style({ transform: 'translate3d(100%, 0, 0)' })),
+                    core_1.transition('active => hidden', [core_1.animate('350ms ease-out')]),
+                    core_1.transition('hidden => active', [
+                        core_1.style({ transform: 'translate3d(-100%, 0, 0)' }),
+                        core_1.animate('350ms ease-out')
+                    ]),
+                ]),
             ]
         }), 
         __metadata('design:paramtypes', [])
