@@ -1,12 +1,12 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {animation, style, animate, state, transition} from '@angular/core'
+import {trigger, style, animate, state, transition} from '@angular/core'
 
 @Component({
   selector: 'panel',
   templateUrl: 'app/panel.html',
   styleUrls: ['app/panel.css'],
   animations: [
-    animation('active', [
+    trigger('active', [
       state('void', style({ height: 0 })),
       state('closed', style({ height: 0 })),
       state('open', style({ height: '*' })),

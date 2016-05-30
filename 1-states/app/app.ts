@@ -1,5 +1,5 @@
 //our root app component
-import {animation, style, animate, state, transition, Component} from '@angular/core'
+import {trigger, style, animate, state, transition, Component} from '@angular/core'
 
 @Component({
   selector: 'my-app',
@@ -7,7 +7,7 @@ import {animation, style, animate, state, transition, Component} from '@angular/
   templateUrl: 'app/app.html',
   directives: [],
   animations: [
-    animation('state', [
+    trigger('state', [
       state('void', style({ display: 'none' })),
       state('active', style({ transform: 'translate3d(0, 0, 0)' })),
       state('hidden', style({ transform: 'translate3d(100%, 0, 0)' })),

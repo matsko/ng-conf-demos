@@ -38,7 +38,7 @@ var PanelCmp = (function () {
             templateUrl: 'app/panel.html',
             styleUrls: ['app/panel.css'],
             animations: [
-                core_2.animation('active', [
+                core_2.trigger('active', [
                     core_2.state('void', core_2.style({ height: 0 })),
                     core_2.state('closed', core_2.style({ height: 0 })),
                     core_2.state('open', core_2.style({ height: '*' })),

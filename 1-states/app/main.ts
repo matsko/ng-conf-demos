@@ -1,5 +1,5 @@
 //main entry point
-import {bootstrap} from '@angular/platform-browser-dynamic';
+import {bootstrap} from '@angular/platform-browser';
 import {App} from './app';
 
 bootstrap(App, [])

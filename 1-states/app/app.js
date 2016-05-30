@@ -48,7 +48,7 @@ var App = (function () {
             templateUrl: 'app/app.html',
             directives: [],
             animations: [
-                core_1.animation('state', [
+                core_1.trigger('state', [
                     core_1.state('void', core_1.style({ display: 'none' })),
                     core_1.state('active', core_1.style({ transform: 'translate3d(0, 0, 0)' })),
                     core_1.state('hidden', core_1.style({ transform: 'translate3d(100%, 0, 0)' })),
